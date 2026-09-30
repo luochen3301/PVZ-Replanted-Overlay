@@ -143,7 +143,7 @@ static void Draw() {
         int nz = snap ? (int)snap->zombies.size() : 0;
         int nsun = snap ? snap->sun : 0;
         int df = game::debug_flags();
-        _snprintf(wm, sizeof(wm), "Lawnbox | PvZ Replanted | %.0f fps | z:%d sun:%d | board:%d cam:%d aff:%d",
+        _snprintf(wm, sizeof(wm), "PvZ Mod Menu | PvZ Replanted | %.0f fps | z:%d sun:%d | board:%d cam:%d aff:%d",
                   fps, nz, nsun, (df & 1) ? 1 : 0, (df & 2) ? 1 : 0, (df & 4) ? 1 : 0);
         dl->AddText(ImVec2(9, 9), IM_COL32(0, 0, 0, 220), wm);
         dl->AddText(ImVec2(8, 8), IM_COL32(255, 60, 60, 255), wm);

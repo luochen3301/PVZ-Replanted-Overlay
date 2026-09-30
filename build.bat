@@ -29,13 +29,13 @@ set SRC=src\dllmain.cpp src\il2cpp_api.cpp src\game_data.cpp src\dx11_hook.cpp ^
 
 cl /nologo /std:c++17 /O2 /MT /W3 /EHsc /utf-8 /D_WIN32_WINNT=0x0A00 /D_CRT_SECURE_NO_WARNINGS /DIMGUI_DEFINE_MATH_OPERATORS ^
   %INC% %SRC% ^
-  /Fe:build\Lawnbox.dll /Fo"build\\" /Fd"build\\" ^
+  /Fe:build\PVZModMenu.dll /Fo"build\\" /Fd"build\\" ^
   /link /DLL /OPT:REF /OPT:ICF user32.lib d3d11.lib dxgi.lib build\freetype\Release\freetype.lib
 if errorlevel 1 (
-  echo Lawnbox.dll locked by running game - linking Lawnbox_pending.dll instead
+  echo PVZModMenu.dll locked by running game - linking PVZModMenu_pending.dll instead
   cl /nologo /std:c++17 /O2 /MT /W3 /EHsc /utf-8 /D_WIN32_WINNT=0x0A00 /D_CRT_SECURE_NO_WARNINGS /DIMGUI_DEFINE_MATH_OPERATORS ^
     %INC% %SRC% ^
-    /Fe:build\Lawnbox_pending.dll /Fo"build\\" /Fd"build\\" ^
+    /Fe:build\PVZModMenu_pending.dll /Fo"build\\" /Fd"build\\" ^
     /link /DLL /OPT:REF /OPT:ICF user32.lib d3d11.lib dxgi.lib build\freetype\Release\freetype.lib
   if errorlevel 1 (
     echo dll_exit=2
