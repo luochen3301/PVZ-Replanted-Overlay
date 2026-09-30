@@ -14,7 +14,7 @@ void MenuUiDraw();   // unused shim
 static HMODULE g_self = nullptr;
 
 static DWORD WINAPI init_thread(void*) {
-    roh::log("=== PvZ Mod Menu v1.0 loaded, pid=%u ===", GetCurrentProcessId());
+    roh::log("=== PvZ Replanted Overlay v1.0 loaded, pid=%u ===", GetCurrentProcessId());
 
     roh::log("[build] ESP geometry, colors, FreeType TrueType interpreter v35");
     if (!il2cpp::init()) {

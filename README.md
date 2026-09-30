@@ -1,8 +1,8 @@
-# PvZ Replanted Mod Menu（修改菜单 / Overlay）
+# PvZ Replanted Overlay（修改菜单）
 
 [English](#english) | 中文
 
-针对 **Plants vs. Zombies Replanted**（Unity IL2CPP 重制版）的原生 D3D11 修改菜单：透视、骨骼、彩人、弹道、经济/战斗/狂暴类修改、变速、波次控制、僵尸生成器、实时 UI 主题编辑与完整中英文双语界面。
+针对 **Plants vs. Zombies Replanted**（Unity IL2CPP 重制版）的原生 D3D11 覆盖层修改菜单：透视、骨骼、彩人、弹道、经济/战斗/狂暴类修改、变速、波次控制、僵尸生成器、实时 UI 主题编辑与完整中英文双语界面。
 
 > ⚠️ **免责声明**：本项目仅供单机游戏的学习与技术研究（IL2CPP 反射、D3D11 钩子、内存读写），不得用于任何多人/竞技场景或商业用途。使用者自行承担一切风险。本项目与 PopCap / EA 无任何关系，请支持正版游戏。
 
@@ -241,9 +241,9 @@ docs/                文档与截图
 
 # English
 
-# PvZ Replanted Mod Menu
+# PvZ Replanted Overlay
 
-A native D3D11 mod menu for **Plants vs. Zombies Replanted** (Unity IL2CPP remake): ESP, skeleton, chams, projectile trajectories, economy/combat/rage cheats, time scale, wave control, a zombie spawner, a live UI theme editor, and full Chinese/English localization.
+A native D3D11 overlay mod menu for **Plants vs. Zombies Replanted** (Unity IL2CPP remake): ESP, skeleton, chams, projectile trajectories, economy/combat/rage cheats, time scale, wave control, a zombie spawner, a live UI theme editor, and full Chinese/English localization.
 
 > ⚠️ **Disclaimer**: For single-player educational/research use only (IL2CPP reflection, D3D11 hooking, memory R/W). Not for multiplayer or commercial use. Not affiliated with PopCap/EA. Use at your own risk.
 

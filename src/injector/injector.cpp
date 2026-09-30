@@ -1,7 +1,7 @@
-// PvZ Mod Menu 注入器
-// - 无参数：自动选注入器所在目录下最新的 PVZModMenu*.dll（按修改时间）
+// PvZ Overlay 注入器
+// - 无参数：自动选注入器所在目录下最新的 PVZOverlay*.dll（按修改时间）
 // - 游戏没开时自动等待进程出现（最多 10 分钟，Ctrl+C 取消）
-// - 目标进程已加载过 PVZModMenu*.dll 时跳过，防止双注入导致双重 hook
+// - 目标进程已加载过 PVZOverlay*.dll 时跳过，防止双注入导致双重 hook
 // - 按子串匹配进程名，默认 replanted
 // 用法: injector.exe [dll路径] [-p 进程名子串] [-nowait]
 #include <windows.h>
@@ -15,7 +15,7 @@ static void str_lower(char* s) {
     for (; *s; ++s) *s = (char)tolower((unsigned char)*s);
 }
 
-// 进程里是否已加载 PVZModMenu*.dll（防双注入）
+// 进程里是否已加载 PVZOverlay*.dll（防双注入）
 static bool find_roh_module(DWORD pid, char* out, size_t n) {
     HANDLE snap = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, pid);
     if (snap == INVALID_HANDLE_VALUE) return false;
@@ -26,7 +26,7 @@ static bool find_roh_module(DWORD pid, char* out, size_t n) {
             char name[MAX_PATH] = {0};
             WideCharToMultiByte(CP_UTF8, 0, me.szModule, -1, name, sizeof(name), 0, 0);
             str_lower(name);
-            if (strncmp(name, "pvzmodmenu", 10) == 0 && strstr(name, ".dll")) {
+            if (strncmp(name, "pvzoverlay", 10) == 0 && strstr(name, ".dll")) {
                 strncpy(out, name, n - 1);
                 out[n - 1] = 0;
                 found = true;
@@ -59,7 +59,7 @@ static int find_all_processes_sub(const char* nameSub, DWORD* out, int max) {
     return n;
 }
 
-// 挑注入目标：多个同名进程时优先选没加载过 PVZModMenu 的（旧实例已注入就跳过）。
+// 挑注入目标：多个同名进程时优先选没加载过 PvZ Overlay 的（旧实例已注入就跳过）。
 // 静默（轮询时反复调用不打印）；anyFound = 是否存在匹配进程（全已注入时为 true）
 static DWORD pick_target(const char* procName, bool* anyFound) {
     DWORD pids[8];
@@ -72,7 +72,7 @@ static DWORD pick_target(const char* procName, bool* anyFound) {
     return 0;
 }
 
-// 注入器所在目录里修改时间最新的 PVZModMenu*.dll
+// 注入器所在目录里修改时间最新的 PVZOverlay*.dll
 static bool newest_roh_dll(char* out, size_t n) {
     char exePath[MAX_PATH];
     if (!GetModuleFileNameA(nullptr, exePath, MAX_PATH)) return false;
@@ -80,7 +80,7 @@ static bool newest_roh_dll(char* out, size_t n) {
     if (!slash) return false;
     *slash = 0;
     char pattern[MAX_PATH];
-    _snprintf(pattern, sizeof(pattern), "%s\\PVZModMenu*.dll", exePath);
+    _snprintf(pattern, sizeof(pattern), "%s\\PVZOverlay*.dll", exePath);
     WIN32_FIND_DATAA fd;
     HANDLE h = FindFirstFileA(pattern, &fd);
     if (h == INVALID_HANDLE_VALUE) return false;
@@ -139,7 +139,7 @@ static int run(int argc, char** argv) {
         if (newest_roh_dll(newest, sizeof(newest)))
             strncpy(dllPath, newest, sizeof(dllPath) - 1);
         else
-            GetFullPathNameA("PVZModMenu.dll", MAX_PATH, dllPath, nullptr);
+            GetFullPathNameA("PVZOverlay.dll", MAX_PATH, dllPath, nullptr);
         dllPath[sizeof(dllPath) - 1] = 0;
     } else {
         printf("[*] dll: %s\n", dllPath);
