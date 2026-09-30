@@ -222,10 +222,10 @@ void DrawSettings(MenuState& s, const ColumnLayout& c) {
     EndGroup();
 
     EnterColumn(c, true);
-    BeginGroup(TR("About ROH"));
+    BeginGroup(TR("About Lawnbox"));
     {
         ImDrawList* dl = ImGui::GetWindowDrawList();
-        const char* const lines[][2] = {{TR("Software:"), " ROH Hook"},
+        const char* const lines[][2] = {{TR("Software:"), " Lawnbox"},
                                         {TR("Target:"), " PvZ Replanted (Unity IL2CPP x64)"},
                                         {TR("Build:"), " v0.5 dev"},
                                         {TR("Engine:"), " Direct3D 11 Native Hook"}};
@@ -330,7 +330,7 @@ void DrawChassis(const ImVec2& winMin, const ImVec2& winMax) {
     dl->AddRect(glassMin, glassMax, ChassisNeon(), kOuterNeonRounding, 0, 1.0f);
 
     const ImVec2 tp(winMin.x + 6.0f, winMin.y);
-    const char* title = "ROH for PVZ Replanted";
+    const char* title = "Lawnbox for PvZ Replanted";
     const ImVec2 ts = ImGui::CalcTextSize(title);
     const ImVec2 at(IM_ROUND(tp.x), IM_ROUND(tp.y + (kTitleBarH - ts.y) * 0.5f));
     dl->AddText(ImVec2(at.x, at.y + 1.0f), Black(0.95f), title);
@@ -363,7 +363,7 @@ void MenuUi::Draw() {
                                    ImGuiWindowFlags_NoScrollWithMouse |
                                    ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize;
 
-    if (ImGui::Begin("ROH for PVZ Replanted", nullptr, flags)) {
+    if (ImGui::Begin("Lawnbox for PvZ Replanted", nullptr, flags)) {
         const ImVec2 winMin = ImGui::GetWindowPos();
         const ImVec2 winMax(winMin.x + ImGui::GetWindowSize().x,
                             winMin.y + ImGui::GetWindowSize().y);

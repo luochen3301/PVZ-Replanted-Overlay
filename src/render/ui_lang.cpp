@@ -39,7 +39,7 @@ constexpr Entry kTable[] = {
     {"Configuration", "配置"},
     {"Keybinds", "按键绑定"},
     {"Language", "语言"},
-    {"About ROH", "关于 ROH"},
+    {"About Lawnbox", "关于 Lawnbox"},
     {"UI Theme", "界面主题"},
     // ---- rows: zombie ESP ----
     {"Box", "方框"},
