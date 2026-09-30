@@ -234,13 +234,17 @@ docs/                文档与截图
 
 ## 截图
 
-**游戏内实际效果**（僵尸 ESP 方框 / 彩人 / 血条 / 顶部射线 / 弹道线同时开启）：
+**游戏内实际效果**（菜单关闭状态：僵尸 ESP 方框 / 彩人隔树篱透视 / 血条 / 顶部射线同时开启，1-2 关满阵）：
 
 ![游戏内 ESP 效果](docs/images/esp-gameplay.png)
 
 **视觉页（Visuals）**——ESP / 彩人 / 弹道全部开关与颜色自定义，右上角取色器展开中：
 
 ![视觉页](docs/images/menu-visuals.png)
+
+**视觉页完整概览**——僵尸 ESP、骨骼、弹道、植物 ESP、掉落物、HUD 六大分组全貌：
+
+![视觉页完整概览](docs/images/menu-visuals-full.png)
 
 **作弊页（Cheats）**——无限阳光、无冷却、免费种植、瞬杀、冻结、植物无敌、自动收集：
 
@@ -298,7 +302,8 @@ INI-based. Game (ESP) colors (`#RRGGBBAA`) and the UI theme (`#RRGGBB`) are two 
 | | |
 |---|---|
 | ![ESP in-game](docs/images/esp-gameplay.png) | ![Visuals tab](docs/images/menu-visuals.png) |
-| ![Cheats tab](docs/images/menu-cheats.png) | ![World tab](docs/images/menu-world.png) |
-| ![GUI theme editor](docs/images/menu-gui.png) | |
+| ![Visuals full page](docs/images/menu-visuals-full.png) | ![Cheats tab](docs/images/menu-cheats.png) |
+| ![World tab](docs/images/menu-world.png) | ![GUI theme editor](docs/images/menu-gui.png) |
+| |
 
-In-game ESP/chams/trajectory shot, the Visuals page (color picker open), Cheats, World, and the GUI theme editor. Rage and Settings shots pending.
+In-game ESP/chams shot (menu closed), the Visuals page (color picker open) and its full-page overview, Cheats, World, and the GUI theme editor. Rage and Settings shots pending.
