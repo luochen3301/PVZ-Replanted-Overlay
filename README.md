@@ -234,8 +234,27 @@ docs/                文档与截图
 
 ## 截图
 
-> 📷 截图待补充，放置于 `docs/images/`：
-> `menu-visuals.png` / `menu-cheats.png` / `menu-rage.png` / `menu-world.png` / `menu-settings.png` / `menu-gui.png` / `esp-gameplay.png`
+**游戏内实际效果**（僵尸 ESP 方框 / 彩人 / 血条 / 顶部射线 / 弹道线同时开启）：
+
+![游戏内 ESP 效果](docs/images/esp-gameplay.png)
+
+**视觉页（Visuals）**——ESP / 彩人 / 弹道全部开关与颜色自定义，右上角取色器展开中：
+
+![视觉页](docs/images/menu-visuals.png)
+
+**作弊页（Cheats）**——无限阳光、无冷却、免费种植、瞬杀、冻结、植物无敌、自动收集：
+
+![作弊页](docs/images/menu-cheats.png)
+
+**世界页（World）**——时间倍速、去雾、跳波、实验性僵尸生成器：
+
+![世界页](docs/images/menu-world.png)
+
+**界面页（GUI）**——六色实时主题编辑器（边框/背景/面板/标签/文本/控件），一键还原：
+
+![界面主题编辑器](docs/images/menu-gui.png)
+
+> 📷 狂暴页（Rage）与设置页（Settings，含中英文切换）截图待补充。
 
 ---
 
@@ -273,3 +292,13 @@ INI-based. Game (ESP) colors (`#RRGGBBAA`) and the UI theme (`#RRGGBB`) are two 
 - "all matching processes already injected" → restart the game to inject a newer build
 - ESP boxes have a historical screen-alignment offset (orthographic camera chain); chams and all memory-write cheats are unaffected
 - D3D11 render mode only
+
+## Screenshots
+
+| | |
+|---|---|
+| ![ESP in-game](docs/images/esp-gameplay.png) | ![Visuals tab](docs/images/menu-visuals.png) |
+| ![Cheats tab](docs/images/menu-cheats.png) | ![World tab](docs/images/menu-world.png) |
+| ![GUI theme editor](docs/images/menu-gui.png) | |
+
+In-game ESP/chams/trajectory shot, the Visuals page (color picker open), Cheats, World, and the GUI theme editor. Rage and Settings shots pending.

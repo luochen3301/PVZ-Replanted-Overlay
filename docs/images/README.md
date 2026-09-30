@@ -1,15 +1,15 @@
 # 截图目录 / Screenshots
 
-把菜单截图放到本目录，README 会自动引用。建议文件名：
+| 文件名 | 内容 | 状态 |
+|---|---|---|
+| `esp-gameplay.png` | 游戏内 ESP + 彩人 + 弹道实际效果 | ✅ |
+| `menu-visuals.png` | 视觉页（取色器展开，效果全开） | ✅ |
+| `menu-cheats.png` | 作弊页 | ✅ |
+| `menu-world.png` | 世界页 | ✅ |
+| `menu-gui.png` | 界面主题编辑器 | ✅ |
+| `menu-rage.png` | 狂暴页 | ⏳ 待补 |
+| `menu-settings.png` | 设置页（含语言切换） | ⏳ 待补 |
 
-| 文件名 | 内容 |
-|---|---|
-| `menu-visuals.png` | 视觉页（ESP/彩人/弹道设置） |
-| `menu-cheats.png` | 作弊页 |
-| `menu-rage.png` | 狂暴页 |
-| `menu-world.png` | 世界页 |
-| `menu-settings.png` | 设置页（含语言切换） |
-| `menu-gui.png` | 界面主题编辑器 |
-| `esp-gameplay.png` | 游戏内 ESP + 彩人实际效果 |
-
-Drop menu screenshots here; README references these exact filenames.
+Screenshots referenced by the README. Five are present; `menu-rage.png` and
+`menu-settings.png` are still pending — drop them in with these exact names
+and the README picks them up automatically.
