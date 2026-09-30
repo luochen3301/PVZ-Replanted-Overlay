@@ -1,5 +1,9 @@
 # PvZ Replanted Overlay（修改菜单）
 
+<p align="center">
+  <img src="docs/images/esp-gameplay.png" alt="PvZ Replanted Overlay 游戏内实际效果" width="960">
+</p>
+
 [English](#english) | 中文
 
 针对 **Plants vs. Zombies Replanted**（Unity IL2CPP 重制版）的原生 D3D11 覆盖层修改菜单：透视、骨骼、彩人、弹道、经济/战斗/狂暴类修改、变速、波次控制、僵尸生成器、实时 UI 主题编辑与完整中英文双语界面。
