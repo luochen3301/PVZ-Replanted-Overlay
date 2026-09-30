@@ -1,7 +1,7 @@
 # PvZ Replanted Overlay（修改菜单）
 
 <p align="center">
-  <img src="docs/images/esp-gameplay.png" alt="PvZ Replanted Overlay 游戏内实际效果" width="960">
+  <img src="docs/images/banner.png" alt="PvZ Replanted Overlay 游戏内实际效果" width="960">
 </p>
 
 [English](#english) | 中文
