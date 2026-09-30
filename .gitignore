@@ -1,0 +1,19 @@
+# 构建产物 / build outputs
+build/
+
+# 开发期调试资料（截图/dump/日志）/ dev artifacts
+offsets/
+*.log
+*.obj
+*.pdb
+*.ilk
+
+# 死代码旧拷贝 / dead code copies
+aimware_imgui/
+
+# 工具会话目录 / tooling
+.zcode/
+
+# 系统杂项 / OS
+Thumbs.db
+Desktop.ini
